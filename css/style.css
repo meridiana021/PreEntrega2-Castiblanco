@@ -50,6 +50,7 @@ header nav ul li{
 .overlay img {
     display: block;
     margin: 0 auto; /* Centra horizontalmente */
+    width: 100%;
 }
 
 /*Banner modulo naranja*/
@@ -83,6 +84,23 @@ header nav ul li{
     text-align: center;
     display: inline-block;
 }
+.card-body{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+.card-titulo{
+    width: 50%;
+}
+.arrow{
+    background-image: url(../img/atipicaRecurso\ 39arrow.svg);
+    height: 25px;
+    width: 50%;
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 100% auto;
+    margin-left: 10px;
+}
 
 .card h3{
     color: #012D36;
@@ -104,6 +122,8 @@ header nav ul li{
     width: 100%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 768px;
 }
 .ctaContenido img{
     width: 100%;
@@ -234,7 +254,9 @@ footer{
 }
 
 /*estilos bootstrap footer*/
-
+nav ul{
+    padding-left:0;
+}
 nav ul li{
     list-style: none;
 }
@@ -287,6 +309,7 @@ button:hover{
 /*queries*/
 /*Tablet galeria*/
 @media screen and (max-width:768px) {
+
     .container-img{
         width: 95%;
         grid-template-columns: repeat(2, 1fr);
@@ -296,6 +319,22 @@ button:hover{
     .container-img .caja-img:nth-child(1){
         grid-column-start: span 1;
     }
+    #ctaInicio{
+        min-width: 10px;
+    }
+    .ctaContenido{
+        width: 100%;
+    }
+    .col-md-4 cont-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #busqueda-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
 }
 /*Teléfono galeria*/
 @media screen and (max-width:480px) {
@@ -326,12 +365,16 @@ button:hover{
 .cont-artic{
     width: 90%;
     padding: 20px;
-    
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
 }
 .cardArtic{
     width: 300px;
     height: auto;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     box-shadow: 0 0 15px black;  
     padding: 0 0 20px 0; 
     margin: 10px; 
@@ -342,14 +385,12 @@ button:hover{
 }
 .contenidoArtic p{
     text-align: left;
-    font-family: 'Roboto', sans-serif;
     font-weight: 100;
 }
 
 .titulo-categoria{
     color: #F28322;
     text-align: left;
-    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 10;
     padding: 0 0 5px 0;
@@ -357,18 +398,18 @@ button:hover{
 .titulo-articulo{
     color: #012D36;
     text-align: left;
-    font-family: 'Roboto', sans-serif;
     font-weight: 100;
     padding: 0 0 5px 0;
 }
 
+/*Contenedor iconos*/
 .indicaciones{
     background-color: #012D36;
-    /* width: 100%;     */
     padding: 3%;
+    display: flex;
+    justify-content: center;
 }
 .contIndic h2{
-    font-family: 'Roboto', sans-serif;
     color: white;
 }
 .contIndic p{
@@ -377,6 +418,9 @@ button:hover{
 }
 .contIconos{
     padding: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 .contIconos p{
     font-family: 'Roboto', sans-serif;
@@ -384,7 +428,8 @@ button:hover{
 }
 .iconos{
     width: 19%;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
 /*Seccion de galeria de artículos*/
