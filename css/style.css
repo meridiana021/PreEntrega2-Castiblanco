@@ -509,6 +509,9 @@ button:hover{
     display: flex;
     background-color: #012D36;
     padding: 3%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     }
 .form-contenedor{
     display: flex;
@@ -529,7 +532,7 @@ button:hover{
 .contContenido h3{
     color: white;    
     text-align: right;
-    font-size: 40;
+    font-size: 40;    
 }
 .contContenido p{
     color: white;
@@ -574,8 +577,23 @@ button:hover{
     color: #012D36;
 }
 
+.iconos-redes{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    padding: 20px 0 20px 0;
 
-
+}
+.cont-iconos{
+    width: 20%;
+    padding: 0 2px;
+}
+.cont-iconos img{
+    height: auto;
+    width: 50%;
+}
 
 /*queries*/
 
