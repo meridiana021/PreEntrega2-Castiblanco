@@ -51,27 +51,27 @@
         <section class="bannerTitulo">
             <h1>contacto</h1>
         </section>
-        <section id="contInicio">
+        <section id="contForm">
             <div class="contContenido izq" id="izq">
                 <h2>¿Tienes preguntas?</h2>
                 <div>
                     <form action="contacto">
-                        <div>
-                            <label for="nombre">Nombre</label>
-                            <input type="text" name="nombre" placeholder="ingresa tu nombre" required>
+                        <div class="cont-formulario">
+                            <div class="labels"><label for="nombre">Nombre</label></div>
+                            <div class="areas-form"><input type="text" name="nombre" required></div>
+                        </div class="cont-formulario">
+                            <div class="labels"><label for="correo">Correo</label></div>
+                            <div class="areas-form"><input type="email" name="correo"></div>                           
                         </div>
-                            <label for="correo">Correo</label>
-                            <input type="email" name="correo">
+                        <div class="cont-formulario">
+                            <div class="labels"><label for="telefono">Teléfono</label></div>
+                            <div class="areas-form"><input type="tel" name="telefono"></div>
                         </div>
-                        <div> 
-                            <label for="telefono">Teléfono</label>
-                            <input type="tel" name="telefono">
+                        <div class="cont-formulario">
+                            <div class="labels"><label for="mensaje">Mensaje</label></div>
+                            <div class="areas-form"><textarea name="mensaje" id="" cols="30" rows="10"></textarea></div>
                         </div>
-                        <div>
-                            <label for="mensaje">Mensaje</label>
-                            <textarea name="mensaje" id="" cols="30" rows="10"></textarea>
-                        </div>
-                        <div>
+                        <div class="cont-formulario">
                             <button type="submit">Enviar</button>            
                         </div>        
                     </form>
