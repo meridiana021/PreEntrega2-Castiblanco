@@ -65,6 +65,9 @@ header nav ul li{
     font-weight: 100;
     font-size: 30;
 }
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6{
+    margin-bottom:0;
+}
 
 /*Cards con fotos*/
 #contCards{
@@ -104,7 +107,7 @@ header nav ul li{
 
 .card h3{
     color: #012D36;
-    font-size: 40px;
+    font-size: 35px;
     text-align: left;
     font-weight: 400;
 }
@@ -159,7 +162,7 @@ header nav ul li{
 }
 
 .left{
-    background-image: url(/img/cta-inicio.jpg);
+    background-image: url(../img/cta-inicio.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -223,7 +226,7 @@ footer{
     text-decoration: none;
 }
 .cta-footer {
-    background-image: url(/img/ctaFooter.jpg);
+    background-image: url(../img/ctaFooter.jpg);
     background-size: cover;
     height: 350px;
     width: 100%;
@@ -302,49 +305,12 @@ button:hover{
     
 }
 .carousel-control-next:hover{
-    background-color: ffffff;
+    background-color: #ffffff00;
     box-shadow: none;
 }
-
-/*queries*/
-/*Tablet galeria*/
-@media screen and (max-width:768px) {
-
-    .container-img{
-        width: 95%;
-        grid-template-columns: repeat(2, 1fr);
-        grid-gap: 10px;
-        grid-template-rows: 200px;
-    }
-    .container-img .caja-img:nth-child(1){
-        grid-column-start: span 1;
-    }
-    #ctaInicio{
-        min-width: 10px;
-    }
-    .ctaContenido{
-        width: 100%;
-    }
-    .col-md-4 cont-footer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    #busqueda-footer{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-}
-/*Teléfono galeria*/
-@media screen and (max-width:480px) {
-    .container-img{
-        width: 90%;
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .container-img .caja-img img{
-        height: 200px;
-    }
+.carousel-control-prev:hover{
+    background-color: #ffffff00;
+    box-shadow: none;
 }
 
 /*Titulo de todas las páginas*/
@@ -363,11 +329,11 @@ button:hover{
 /*Página de lugares*/
 
 .cont-artic{
-    width: 90%;
+    /* width: 90%; */
     padding: 20px;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
 }
 .cardArtic{
@@ -409,12 +375,19 @@ button:hover{
     display: flex;
     justify-content: center;
 }
+.contenedor-iconos{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
 .contIndic h2{
     color: white;
+    text-align: center;
 }
 .contIndic p{
-    font-family: 'Roboto', sans-serif;
     color: white;
+    text-align: center;
 }
 .contIconos{
     padding: 3%;
@@ -423,7 +396,6 @@ button:hover{
     justify-content: space-evenly;
 }
 .contIconos p{
-    font-family: 'Roboto', sans-serif;
     color: white;
 }
 .iconos{
@@ -458,36 +430,59 @@ button:hover{
 
 /*Página de Nosotros*/
 #bannerNosotros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 40vh;
+    height: 30vh;
     background-color: #012D36;
     padding: 10%;
 }
-.descNosotros div{
-    height: 40vh;
-    
-}
-.descNosotros1{
-    background-image: url(/img/imagennosotros.jpg);
-    background-size: cover;
-    background-position: center;
+
+/* .descNosotros1{
+    height: 40%;
+} */
+.carousel-inner{
+    /* height: 50%; */
 }
 .descNosotros2{
     background-color: #012D36;
-    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .contdescNosotros2{
-    position: absolute;
-    top: 0;
-    left: 15%;
-    transform: translate(0, 30%);
+    padding: 4%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+    align-items: center;
+    
 }
 .contdescNosotros2 h2, p{
-    font-family: 'Roboto', sans-serif;
+    text-align: center;
     color: white;
     padding: 20px;
     margin: auto;
 }
+.contcards-nos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5%;
+}
+.card-nos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.contenidoCard p{
+    text-align: center;
+    color: #012D36;
+}
+
 
 /*Página de contacto*/
 #ctaInicio{
@@ -540,4 +535,66 @@ button:hover{
 }
 .izq form{
     font-family: 'Roboto', sans-serif;    
+}
+
+
+
+
+
+
+/*queries*/
+/*Tablet galeria*/
+@media screen and (max-width:768px) {
+
+    .container-img{
+        width: 95%;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-template-rows: 200px;
+    }
+    .container-img .caja-img:nth-child(1){
+        grid-column-start: span 1;
+    }
+    #ctaInicio{
+        min-width: 10px;
+    }
+    .ctaContenido{
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .col-md-4 cont-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    #busqueda-footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    .contIconos{
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+    }
+
+    .iconos{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+    }
+
+/*Teléfono galeria*/
+@media screen and (max-width:480px) {
+    .container-img{
+        width: 90%;
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .container-img .caja-img img{
+        height: 200px;
+    }
+    
+
 }
