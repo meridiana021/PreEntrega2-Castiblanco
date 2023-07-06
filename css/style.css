@@ -420,13 +420,6 @@ button:hover{
 }
 
 /*Página de Comidas*/
-.b-contVideo{
-    padding: 2%;
-}
-.contVideo{
-    width: 29%;
-    display: inline-block;
-}
 
 .grid-vidcontainer{
     width: 100%;
@@ -434,19 +427,18 @@ button:hover{
     margin: auto;
     margin-top: 60px;
     margin-bottom: 60px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 250px;
-    grid-gap: 20px;
+    display: flex ;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
 }
 
-.grid-vidcontainer .video{
+.video{
+    width: 50%;
+    padding: 10px;    
+}
+.video-large{
     width: 100%;
-    height: 100%;
-}
-
-.grid-vidcontainer .video :nth-child(1){
-    grid-row-start: span 3;
 }
 
 /*Página de Nosotros*/
@@ -548,11 +540,12 @@ button:hover{
     background-color: white;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 .izq h2{
     color: #F28322;
-    padding: 2%;
-    text-align: left;
+    padding: 15px 0 15px 0;
+    text-align: center;
     font-size: 40;
 }
 .izq form{
@@ -560,10 +553,20 @@ button:hover{
     font-weight: 400;   
 }
 
+.formulario{
+    width: 50%;
+
+}
+
 .areas-form input, textarea{
+    width: 100%;
     background: none;
     border: none;
 	border-bottom: solid 2px #012D36;
+}
+.areas-form textarea{
+    background-color: rgb(245, 245, 245);
+    height: 50px;
 }
 .labels label{
     font-family: 'Roboto', sans-serif;
@@ -624,6 +627,16 @@ button:hover{
         display: flex;
         flex-direction: column;
         justify-content: center;
+    }
+    /*Resp Videos*/
+    .video{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    /*Resp Formulario*/
+    .formulario{
+        width: 70%;
     }
 }
 /*Teléfono galeria*/
