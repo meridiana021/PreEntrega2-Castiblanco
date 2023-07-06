@@ -442,9 +442,7 @@ button:hover{
 /* .descNosotros1{
     height: 40%;
 } */
-.carousel-inner{
-    /* height: 50%; */
-}
+
 .descNosotros2{
     background-color: #012D36;
     display: flex;
@@ -585,9 +583,9 @@ button:hover{
         display: flex;
         flex-direction: column;
     }
-
+}
 /*Teléfono galeria*/
-@media screen and (max-width:480px) {
+@media screen and (max-width:480px){
     .container-img{
         width: 90%;
         grid-template-columns: repeat(1, 1fr);
@@ -595,6 +593,4 @@ button:hover{
     .container-img .caja-img img{
         height: 200px;
     }
-    
-
 }
